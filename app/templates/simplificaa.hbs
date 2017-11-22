@@ -1,0 +1,23 @@
+<html>
+	<head>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	</head>
+	<body class="container">
+		<div class="back-img">
+			<div style="background-image:url(images/mecanic.jpg);">
+				<h3>
+					Entenda tudo sobre o problema do seu carro
+				</h3>
+			</div>
+		</div>
+		{{input value=searchText type='text' placeholder='Filter'}}
+		<h3> Serviços </h3>
+		{{#each filteredResources as |service|}}
+			<div>
+				{{service}}
+			</div>
+		{{/each}}
+	</body>
+</html>
+{{outlet}}
